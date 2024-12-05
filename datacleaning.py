@@ -37,3 +37,21 @@ print(dfFantasy2022.shape, dfFantasy2023.shape, dfFantasy2024.shape)
 #dfFantasy2024 = dfFantasy2024.drop(dfFantasy2024.columns[4:25], axis=1)
 #dfFantasy2024.to_csv('2024fantasydata.csv', index=False)
 #print(dfFantasy2024.head())
+
+
+#merged_df = pd.merge(dfFantasy2022, df2022, on='Player', how='inner')  # Use 'inner' join by default
+
+# Save the merged dataframe to a new CSV file (optional)
+#merged_df = pd.read_csv("all2022data.csv")
+#merged_df = merged_df.drop_duplicates(subset='Player', keep=False) 
+#merged_df.to_csv('all2022data.csv', index=False)
+#print(merged_df.head())
+
+df = pd.read_csv('all2022data.csv')  # Replace with your file name
+
+# Drop rows where the 'Position' column equals 'QB'
+df_filtered = df[df['Pos'] != 'QB']
+
+# Save the filtered dataframe to a new CSV file (optional)
+df_filtered.to_csv('all2022data.csv', index=False)
+
