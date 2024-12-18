@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('all2022data.csv')
 print(data.head())
 features = [
-    'Age', 'Rec', 'Tgt', 'TD', 'Y/G', 'Touch' ]
+    'Age', 'Rec', 'Tgt', 'TD', 'Y/G', 'Touch', 'Y/G', 'Y/G.1']
 X = data[features]
 y = data['FantPt']
 
